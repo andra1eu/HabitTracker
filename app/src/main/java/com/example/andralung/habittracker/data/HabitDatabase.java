@@ -30,7 +30,7 @@ public class HabitDatabase {
         String[] columns = new String[]{WEEK_DAY_COLUMN, DAY_PART_COLUMN, LESSONS_NUMBER_COLUMN};
         String selection = DAY_PART_COLUMN + "=?";
         String[] selectionArgs = new String[]{dayPart};
-        
+
         return db.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
     }
 
@@ -73,7 +73,7 @@ public class HabitDatabase {
                     DAY_PART_COLUMN + " TEXT, " +
                     LESSONS_NUMBER_COLUMN + " INTEGER NOT NULL);";
 
-            Log.d("create table", SQL_CREATE_HABIT_TABLE);
+            Log.d(TABLE_NAME, SQL_CREATE_HABIT_TABLE);
             db.execSQL(SQL_CREATE_HABIT_TABLE);
         }
 
