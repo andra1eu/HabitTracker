@@ -23,7 +23,7 @@ public class HabitDatabase {
     }
 
     public void insert(Habit habit) {
-        db.insert("", null, habit.getValues());
+        db.insert(TABLE_NAME, null, habit.getValues());
     }
 
     public Cursor getHabit(String dayPart) {
